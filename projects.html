@@ -1,0 +1,351 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nimra Fatima - Projects</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <style>
+        body {
+            margin: 0;
+            background-color: #f2f2f2;
+            font-family: "Merriweather", serif;
+            color: #303030;
+            padding-bottom: 0;
+        }
+
+        .navbar {
+            background-color: #020750;
+            padding: 0 12px;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .links a {
+            display: flex;
+            align-items: center;
+            color: white;
+            height: 100%;
+            padding: 20px 25px;
+            text-decoration: none;
+            font-family: "Merriweather", serif;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .links a:hover {
+            background-color: #DBDBDB;
+            color: #0D0D0D;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .links {
+            display: flex;
+            align-items: stretch;
+            margin-right: 40px;
+        }
+
+        .logo {
+            margin-left: 40px;
+        }
+
+        .logo h1 {
+            font-size: 20px;
+            color: white;
+            margin: 0;
+        }
+
+        .skills-section {
+            max-width: 1100px;
+            margin: 80px auto 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .skills-section h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #121212;
+        }
+
+        .skills-section p.subtitle {
+            max-width: 700px;
+            margin: 0 auto 50px auto;
+            font-weight: 300;
+            font-size: 1.1rem;
+            color: #6e6e6e;
+            line-height: 1.5;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .skill-card {
+            background-color: white;
+            padding: 40px 30px;
+            flex: 0 1 calc((100% - 60px) / 3);
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            text-align: left;
+            transition: 0.3s ease;
+        }
+
+        .skill-card:hover {
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+
+        .icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin-bottom: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        
+        .photographer {
+            background: linear-gradient(135deg, #7cd1ff, #0096c7);
+        }
+
+        .video {
+            background: linear-gradient(135deg, #c77dff, #6a4c93);
+        }
+
+        .management {
+            background: linear-gradient(135deg, #8ef0b2, #00c26e);
+        }
+
+       
+        .icon img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .skill-card h2 {
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .skill-card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .skill-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skill-card ul li {
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #1e3a8a;
+        }
+
+        .skill-card ul li::before {
+            content: "→ ";
+            color: #1e3a8a;
+            font-weight: bold;
+        }
+
+        .footer {
+            background-color: #020750;
+            color: #dbdbdb;
+            padding: 40px 0px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+        }
+
+        @media (max-width: 900px) {
+            .skills-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .skill-card {
+                flex: 1 1 100%;
+                max-width: none;
+            }
+        }
+
+        @media (min-width: 901px) {
+            .skills-container {
+                flex-wrap: nowrap;
+            }
+            .skill-card {
+                flex: 0 0 calc((100% - 60px) / 3);
+            }
+        }
+
+        .footer_container {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .footer_section {
+            min-width: 220px;
+        }
+
+        .footer_section h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .footer_section a {
+            color: #dbdbdb;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .footer_section a:hover {
+            color: white;
+        }
+
+        .socials a {
+            color: #dbdbdb;
+            margin-right: 15px;
+            font-size: 22px;
+        }
+
+        .socials a:hover {
+            color: white;
+        }
+
+        .footer_bottom {
+            text-align: center;
+            margin-top: 20px;
+            border-top: 1px solid #525252;
+            padding-top: 10px;
+            font-size: 14px;
+            color: #bebebe;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="logo"><a href="index.html"><h1>Nimra Fatima</h1></a></div>
+        <div class="links">
+            <a href="index.html">HOME</a>
+            <a href="about_me.html">ABOUT ME</a>
+            <a href="projects.html">PORTFOLIO</a>
+            <a href="contact.html">CONTACT</a>
+        </div>
+    </div>
+
+    <section class="skills-section" id="skills">
+        <h1>Projects</h1>
+        <p class="subtitle">Every project here is a step in my journey to combine creativity with technical skills.</p>
+
+        <div class="skills-container">
+
+            
+            <div class="skill-card">
+                <div class="icon photographer">
+                    <img src="C:\Users\CP\Desktop\portfolio\scratch.png" alt="Scratch">
+                </div>
+                <h2>Scratch</h2>
+                <p>Created multiple interactive games with increasing complexity.</p>
+                <ul>
+                    <li>Level 1 to 3 Games</li>
+                    <li>Complex Games</li>
+                    <li>Innovative Story Games</li>
+                </ul>
+            </div>
+
+            
+            <div class="skill-card">
+                <div class="icon video">
+                    <img src="C:\Users\CP\Desktop\portfolio\pic3.png" alt="C++">
+                </div>
+                <h2>C++</h2>
+                <p>Developed console-based management systems using C++.</p>
+                <ul>
+                    <li>ATM System</li>
+                    <li>Library Management</li>
+                    <li>Console Applications</li>
+                </ul>
+            </div>
+
+           
+            <div class="skill-card">
+                <div class="icon management">
+                    <img src="C:\Users\CP\Desktop\portfolio\pic4.png" alt="MS Office">
+                </div>
+                <h2>MS Office</h2>
+                <p>Created reports, presentations, and spreadsheets using MS Office.</p>
+                <ul>
+                    <li>Professional Reports</li>
+                    <li>Interactive Presentations</li>
+                    <li>Data Sheets</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer" id="contact">
+        <div class="footer_container">
+
+            <div class="footer_section">
+                <h3>Quick Links</h3>
+                <a href=".html">Home</a>
+                <a href="about_me.html">About Me</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer_section">
+                <h3>Contact</h3>
+                <p>Email: nimrafatima@627.com</p>
+                <p>Location: Lahore, Pakistan</p>
+                <p>Phone: 03298221922</p>
+            </div>
+
+            <div class="footer_section">
+                <h3>Follow Me</h3>
+                <div class="socials">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                    <a href="#"><i class="fa-brands fa-behance"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer_bottom">
+            © 2025 Nimra Fatima — All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
